@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: Deploy
         run: |
-          cd /opt/tucik/landing
-          docker compose down | true
+          cd /opt/tucik
+          docker compose down tucik-landing | true
           echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
-          docker compose pull | true
-          docker compose up -d
+          docker compose pull tucik-landing | true
+          docker compose up tucik-landing -d
