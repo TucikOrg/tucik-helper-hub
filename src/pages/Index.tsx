@@ -3,8 +3,8 @@ import { PhoneMockup } from "@/components/PhoneMockup";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-white flex flex-col">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
         {/* Navigation */}
         <nav className="flex justify-between items-center mb-16">
           <div className="flex items-center">
@@ -36,6 +36,23 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="w-full py-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gray-600">
+            Connect with me on Telegram:{" "}
+            <a 
+              href="https://t.me/invectys" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-blue-500 hover:text-blue-600 font-medium"
+            >
+              @invectys
+            </a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
