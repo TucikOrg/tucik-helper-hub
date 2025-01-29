@@ -17,4 +17,4 @@ jobs:
         run: |
           npm install
           npm run build
-          mv /app/dist /root/tucik/landing
+          mv dist /root/tucik/landing
