@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  update-meta:
+  build:
     runs-on: self-hosted
 
     steps:
@@ -18,3 +18,6 @@ jobs:
           npm install
           npm run build
           mv dist /root/tucik/landing
+      - name: Refresh
+        run: |
+          systemctl restart landing
